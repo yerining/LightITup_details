@@ -12,18 +12,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/grey"
-            android:orientation="vertical">
+            android:backgroundTint="#3EA6A6A6"
+            android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/one"
+                android:backgroundTint="#3EA6A6A6"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:backgroundTint="#3EA6A6A6"
                     android:orientation="vertical">
 
                     <ImageView
@@ -33,21 +35,21 @@
                         android:src="@drawable/hospital" />
 
                     <Button
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="20dp"
+                        android:id="@+id/back_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/back">
-
-                    </Button>
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/back"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <LinearLayout
                         android:id="@+id/grey"
                         android:layout_width="match_parent"
                         android:layout_height="230dp"
                         android:layout_marginTop="250dp"
-                        android:backgroundTint="#FFFFFF"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:backgroundTint="#3EA6A6A6">
 
                         <Button
                             android:id="@+id/call_activity"
@@ -56,8 +58,8 @@
                             android:layout_marginLeft="65dp"
                             android:layout_marginTop="170dp"
                             android:background="@drawable/button_background"
-                            android:textColor="@color/black"
-                            android:text="전화하기" />
+                            android:text="전화하기"
+                            android:textColor="@color/black" />
 
                         <Button
                             android:id="@+id/map_activity"
@@ -78,10 +80,10 @@
                             android:layout_marginTop="170dp"
                             android:layout_toRightOf="@id/map_activity"
                             android:background="@drawable/button_background"
-                            android:scaleType="centerCrop"
                             android:padding="0sp"
-                            android:textColor="@color/black"
-                            android:text="스크랩" />
+                            android:scaleType="centerCrop"
+                            android:text="스크랩"
+                            android:textColor="@color/black" />
 
                     </LinearLayout>
 
@@ -89,13 +91,12 @@
                         android:id="@+id/hospital_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
                         android:layout_marginTop="200dp"
                         android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:visibility="visible"
                         android:background="@drawable/background_hospital"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
