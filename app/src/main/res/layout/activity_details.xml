@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/one"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hospital" />
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/back">
+
+                    </Button>
+
+                    <LinearLayout
+                        android:id="@+id/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:layout_marginTop="250dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/call_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="170dp"
+                            android:background="@drawable/button_background"
+                            android:textColor="@color/black"
+                            android:text="전화하기" />
+
+                        <Button
+                            android:id="@+id/map_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="170dp"
+                            android:layout_toRightOf="@id/call_activity"
+                            android:background="@drawable/button_background_color"
+                            android:text="지도보기"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/scrap_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="170dp"
+                            android:layout_toRightOf="@id/map_activity"
+                            android:background="@drawable/button_background"
+                            android:scaleType="centerCrop"
+                            android:padding="0sp"
+                            android:textColor="@color/black"
+                            android:text="스크랩" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:visibility="visible"
+                        android:background="@drawable/background_hospital"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:text="[ 엠앤비여성병원 ]"
+                            android:textColor="@color/black"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="산부인과"
+                            android:textColor="#86000000"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="40dp"
+                            android:text="인천 계양구 장제로772번길 2"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="20dp"
+                            android:text="평일 09:00~20:00"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/two"
+                android:layout_below="@+id/one"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/two"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/call"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:text="032-552-3500" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_below="@id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/address"
+                    android:layout_below="@id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/address"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="  인천 계양구 장제로772번길 2" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_below="@id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/loaction"
+                    android:layout_below="@id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:src="@drawable/location"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_loaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="계양경찰서, 계양소방서 바로 옆에 위치해있습니다." />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="이용가능 버스노선은 24-1, 111, 10, 66, 770" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_below="@id/loaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/parking"
+                    android:layout_below="@id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/parking"
+                        android:textSize="17dp"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text=" 주차, 예약, 무선 인터넷, 남/녀 화장실 구분" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_below="@id/parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/time"
+                    android:layout_below="@id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:src="@drawable/time" />
+
+                    <LinearLayout
+                        android:id="@+id/text_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="일요일/공휴일 09:00~13:00" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="평일 09~00~20:00" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_below="@id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/tag"
+                    android:layout_below="@id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/tag"/>
+
+                    <LinearLayout
+                        android:id="@+id/test_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#가족분만 #요실금 #부인과성형 #소아과" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="#여의사진료" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_below="@id/tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E000000"/>
+
+                <LinearLayout
+                    android:id="@+id/treatment"
+                    android:layout_below="@id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:src="@drawable/treatment"/>
+
+                    <LinearLayout
+                        android:id="@+id/text_treatment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="진료과목: 내과, 소아청소년과, 마취통증의학과," />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="영상의학과, 가정의학과, 유방클리닉, 산후조리원," />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:text="산모 문화센터 운영" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
